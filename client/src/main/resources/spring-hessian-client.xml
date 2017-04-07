@@ -7,7 +7,10 @@
     <bean id="hessianService"
           name="hessianService"
           class="org.springframework.remoting.caucho.HessianProxyFactoryBean" >
+        <!--local-->
         <property name="serviceUrl" value="http://127.0.0.1:8080/hessian/hessianService" />
+        <!--指定IP-->
+        <!--<property name="serviceUrl" value="http://172.16.3.230:8080/hessian/hessianService" />-->
         <property name="serviceInterface" value="com.henry.xi.hessian.MathService" />
         <property name="readTimeout" value="10000" />
     </bean>
